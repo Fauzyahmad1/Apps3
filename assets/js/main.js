@@ -126,6 +126,23 @@ document.addEventListener("DOMContentLoaded", function() {
         // Initial setup
         updateSimulatedScreen(0);
     }
+
+    // Figma Interactive Prototype Chips Logic
+    const figmaProtoIframe = document.getElementById("figmaProtoIframe");
+    const pChips = document.querySelectorAll(".proto-chips .pchip");
+    if (figmaProtoIframe && pChips.length > 0) {
+        pChips.forEach(chip => {
+            chip.addEventListener("click", function() {
+                pChips.forEach(c => c.classList.remove("on"));
+                this.classList.add("on");
+                const nodeId = this.getAttribute("data-node");
+                if (nodeId) {
+                    const newSrc = `https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F5aLzuRKCWcvQYTto2bHuzZ%2FUntitled%3Fnode-id%3D${nodeId}%26starting-point-node-id%3D1%253A746%26t%3DwDJCuvwCNXOWV57H-1`;
+                    figmaProtoIframe.src = newSrc;
+                }
+            });
+        });
+    }
 });
 
 // Smooth scrolling for navigation links

@@ -1206,3 +1206,159 @@ body.dark-theme .theme-toggle-btn .moon-icon {
     box-shadow: 0 0 15px rgba(27, 82, 192, 0.6);
     transform: scale(1.1);
 }
+
+/* ==========================================================================
+   FIGMA EMBED & PROTO CHIPS STYLING
+   ========================================================================== */
+
+.figma-box {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    background: var(--bg-card);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.figma-box:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-light);
+}
+
+.figma-box iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+}
+
+.figma-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: var(--bg-light);
+    border-top: 1px solid var(--border-light);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.fg-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.fg-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.fd-primary {
+    background: var(--primary);
+}
+
+.fd-secondary {
+    background: var(--secondary);
+}
+
+.fd-success {
+    background: var(--success);
+}
+
+.fd-warning {
+    background: var(--warning);
+}
+
+.fd-danger {
+    background: var(--danger);
+}
+
+.figma-bar a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.figma-bar a:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.fa-primary {
+    color: var(--primary);
+}
+
+.fa-secondary {
+    color: var(--secondary);
+}
+
+.fa-success {
+    color: var(--success);
+}
+
+.fa-warning {
+    color: var(--warning);
+}
+
+.fa-danger {
+    color: var(--danger);
+}
+
+.figma-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 6px 4px 24px;
+    font-weight: 400;
+}
+
+.figma-note code {
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    background: rgba(27, 82, 192, 0.08);
+    color: var(--primary);
+}
+
+body.dark-theme .figma-note code {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-light);
+}
+
+.proto-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.pchip {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-light);
+    color: var(--text-muted);
+}
+
+.pchip.on,
+.pchip:hover {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: var(--white);
+    box-shadow: 0 4px 14px rgba(27, 82, 192, 0.25);
+}
+
