@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus UI/UX Belanja.id - Belanja Aman, Bayar di Tempat</title>
+    <meta name="description" content="Landing page portofolio studi kasus UI/UX untuk aplikasi marketplace Belanja.id dengan fokus pada sistem COD yang aman dan terpercaya bagi semua kalangan.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Scroll Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="grid-bg-overlay">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        })();
+    </script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home" id="brandLogo">
+                Belanja<span class="check-logo">.id</span> <i class="fas fa-check-circle check-logo"></i>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home" id="navHome">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#problem" id="navProblem">Problem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#empathy" id="navEmpathy">Empathy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#define" id="navDefine">Define</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ideate" id="navIdeate">Ideate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#designsystem" id="navDesignSystem">Design System</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mockups" id="navMockups">UI Design</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#prototype" id="navPrototype">Prototype</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testing" id="navTesting">Testing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#creator" id="navCreator">Team</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+                            <i class="fas fa-sun sun-icon"></i>
+                            <i class="fas fa-moon moon-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="badge bg-light text-primary mb-3 px-3 py-2 rounded-pill fw-bold">UI/UX CASE STUDY</span>
+                    <h1 class="mb-4">Marketplace <span>Belanja.id</span>: Solusi Belanja Aman COD</h1>
+                    <p>Meningkatkan kepercayaan belanja online bagi kalangan non-digital native melalui perancangan aplikasi belanja dengan sistem Cash On Delivery (COD) yang transparan, mudah, dan bebas penipuan.</p>
+                    <div class="d-flex gap-3 flex-wrap mt-4">
+                        <a href="#prototype" class="btn btn-primary-custom" id="heroBtnProto">Mulai Uji Coba</a>
+                        <a href="#problem" class="btn btn-secondary-custom" id="heroBtnDetail">Pelajari Studi Kasus</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+                    <div class="hero-mockup-wrap">
+                        <div class="device-frame device-hero-1">
+                            <img src="assets/img/splash.png" alt="Splash Screen Belanja.id" id="imgSplashHero">
+                        </div>
+                        <div class="device-frame device-hero-2">
+                            <img src="assets/img/home.png" alt="Home Screen Belanja.id" id="imgHomeHero">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="section-tag">Nilai Utama</span>
+                <h2>Cepat. Simpel. <span>Aman.</span></h2>
+                <p class="section-desc">Pilar utama perancangan UI/UX Belanja.id untuk memudahkan transaksi jual beli tanpa rasa cemas.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-card" id="valCard1">
+                        <div class="value-icon">
+                            <i class="fas fa-hand-holding-dollar"></i>
+                        </div>
+                        <h4 class="mb-3">COD Terintegrasi</h4>
+                        <p class="text-muted mb-0">Sistem pembayaran tunai di tempat yang terverifikasi kurir resmi. Pengguna bisa memeriksa paket sebelum menyerahkan uang pembayaran.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-card" id="valCard2">
+                        <div class="value-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h4 class="mb-3">UI/UX Ultra-Sederhana</h4>
+                        <p class="text-muted mb-0">Navigasi bersih bebas iklan mengganggu. Tombol tindakan berukuran besar serta alur transaksi yang langsung ke sasaran tanpa langkah bertele-tele.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-card" id="valCard3">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h4 class="mb-3">Verifikasi Toko Lokal</h4>
+                        <p class="text-muted mb-0">Mengutamakan mitra penjual dan UMKM terdekat dari wilayah pengguna. Mengurangi ongkos kirim dan mempercepat durasi pengantaran kurir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section id="problem" class="bg-light">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="section-tag">Konteks Masalah</span>
+                <h2>Latar Belakang & <span>Solusi</span></h2>
+                <p class="section-desc">Menembus hambatan transaksi digital untuk jutaan masyarakat yang belum tersentuh ekosistem pembayaran non-tunai.</p>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h3 class="mb-4 text-danger d-flex align-items-center">
+                        <i class="fas fa-circle-exclamation me-3"></i> Masalah Utama Pengguna
+                    </h3>
+                    <div class="problem-card" id="probCard1">
+                        <h5 class="mb-2">Kekhawatiran Penipuan Online</h5>
+                        <p class="text-muted mb-0 small">Banyak calon konsumen ragu berbelanja online karena takut barang yang dikirim palsu atau tidak sampai setelah transfer uang.</p>
+                    </div>
+                    <div class="problem-card" id="probCard2">
+                        <h5 class="mb-2">Keterbatasan Akses Pembayaran Digital</h5>
+                        <p class="text-muted mb-0 small">Sebagian besar masyarakat di daerah sub-urban tidak memiliki mobile banking, kartu kredit, atau akun e-wallet untuk transaksi nontunai.</p>
+                    </div>
+                    <div class="problem-card" id="probCard3">
+                        <h5 class="mb-2">Kompleksitas Aplikasi E-Commerce</h5>
+                        <p class="text-muted mb-0 small">UI aplikasi belanja populer saat ini dinilai terlalu padat informasi, penuh pop-up iklan, dan membingungkan orang tua.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h3 class="mb-4 text-success d-flex align-items-center">
+                        <i class="fas fa-circle-check me-3"></i> Solusi Desain Belanja.id
+                    </h3>
+                    <div class="solution-card" id="solCard1">
+                        <h5 class="mb-2">COD Aman dan Terproteksi</h5>
+                        <p class="text-muted mb-0 small">Fitur buka paket sebelum bayar yang disaksikan kurir, serta jaminan retur instan di tempat jika barang cacat atau tidak cocok.</p>
+                    </div>
+                    <div class="solution-card" id="solCard2">
+                        <h5 class="mb-2">Registrasi Sederhana Tanpa Rekening</h5>
+                        <p class="text-muted mb-0 small">Pendaftaran akun cukup menggunakan nomor WhatsApp. Seluruh proses penyelesaian transaksi difokuskan pada pembayaran tunai.</p>
+                    </div>
+                    <div class="solution-card" id="solCard3">
+                        <h5 class="mb-2">Desain Antarmuka Minimalis</h5>
+                        <p class="text-muted mb-0 small">Kategori terstruktur, kontras warna teks yang diperkuat, tombol checkout berukuran besar, dan bantuan cepat lewat WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Thinking Process -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="section-tag">Metodologi</span>
+                <h2>Desain Menggunakan <span>Design Thinking</span></h2>
+                <p class="section-desc">Kerangka kerja terstruktur untuk memastikan semua solusi UI/UX yang dibuat benar-benar menyelesaikan pain points pengguna.</p>
+            </div>
+
+            <!-- STEP 1: EMPATHIZE -->
+            <div id="empathy" class="case-study-step py-5">
+                <div class="row">
+                    <div class="col-lg-3" data-aos="fade-right">
+                        <div class="dt-step-number">01</div>
+                        <h3 class="dt-step-title text-primary">EMPATHIZE</h3>
+                        <p class="text-muted small">Kami melakukan survei kuantitatif terhadap 50 responden dan wawancara mendalam dengan 10 pengguna target (usia 35-55 tahun) untuk memahami kebiasaan belanja mereka.</p>
+                    </div>
+                    <div class="col-lg-9" data-aos="fade-left">
+                        <h5 class="mb-4 fw-bold text-dark"><i class="fas fa-users-rectangle text-primary me-2"></i> Peta Empati (Empathy Map)</h5>
+                        <div class="empathy-map-grid mb-5">
+                            <div class="empathy-quadrant" id="empQuad1">
+                                <h5>SAY (Apa yang Dikatakan)</h5>
+                                <ul class="small mb-0">
+                                    <li>"Saya tidak paham cara transfer bank lewat mesin ATM."</li>
+                                    <li>"Lebih baik beli langsung di pasar biar bisa pegang barang."</li>
+                                    <li>"Tetangga saya kemarin tertipu belanja online, barangnya tidak dikirim."</li>
+                                </ul>
+                            </div>
+                            <div class="empathy-quadrant" id="empQuad2">
+                                <h5>THINK (Apa yang Dipikirkan)</h5>
+                                <ul class="small mb-0">
+                                    <li>"Apakah belanja online ini aman atau cuma tipu-tipu?"</li>
+                                    <li>"Bagaimana kalau barang yang datang rusak atau tidak pas ukurannya?"</li>
+                                    <li>"Saya tidak punya rekening m-banking, pasti belanjanya ribet."</li>
+                                </ul>
+                            </div>
+                            <div class="empathy-quadrant" id="empQuad3">
+                                <h5>DO (Apa yang Dilakukan)</h5>
+                                <ul class="small mb-0">
+                                    <li>"Membatalkan pemesanan barang jika tidak ada pilihan pembayaran COD."</li>
+                                    <li>"Meminta bantuan anak atau keponakan untuk memesankan barang."</li>
+                                    <li>"Mengecek ulasan produk berulang kali sebelum memantapkan hati."</li>
+                                </ul>
+                            </div>
+                            <div class="empathy-quadrant" id="empQuad4">
+                                <h5>FEEL (Apa yang Dirasakan)</h5>
+                                <ul class="small mb-0">
+                                    <li>"Cemas dan takut uang hangus sebelum paket tiba di rumah."</li>
+                                    <li>"Kebingungan saat melihat navigasi aplikasi yang terlalu banyak iklan."</li>
+                                    <li>"Kecewa ketika produk yang diterima jauh berbeda dari foto pajangan."</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- User Persona -->
+                        <h5 class="mb-4 fw-bold text-dark"><i class="fas fa-user-gear text-primary me-2"></i> Representasi Persona Pengguna</h5>
+                        <div class="persona-card" id="personaCard">
+                            <div class="persona-header text-center text-md-start">
+                                <div class="row align-items-center">
+                                    <div class="col-md-3 text-center">
+                                        <div class="persona-avatar-frame">
+                                            <img src="assets/img/profile.png" alt="Budi Santoso Avatar" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Budi+Santoso&background=1B52C0&color=fff&size=150';">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 mt-3 mt-md-0">
+                                        <h4>Budi Santoso</h4>
+                                        <p class="badge bg-secondary mb-2">Target Utama</p>
+                                        <p class="mb-0 small text-light-muted">Wiraswasta Toko Kelontong | 45 Tahun | Bekasi</p>
+                                    </div>
+                                    <div class="col-md-4 mt-3 mt-md-0">
+                                        <ul class="persona-meta small">
+                                            <li><strong>Pekerjaan:</strong> Pemilik Warung</li>
+                                            <li><strong>Aktivitas HP:</strong> WhatsApp, Facebook</li>
+                                            <li><strong>Tipe Pembayaran:</strong> Tunai / Cash</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="persona-body">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <h6 class="fw-bold text-primary mb-3"><i class="fas fa-bullseye me-2"></i> Tujuan & Motivasi</h6>
+                                        <ul class="small text-muted mb-0">
+                                            <li class="mb-2">Ingin kulakan barang dagangan warung dengan harga eceran murah tanpa perlu repot pergi ke pasar induk kota.</li>
+                                            <li class="mb-2">Membayar langsung secara cash saat barang diantar agar terhindar dari modus transfer penipuan.</li>
+                                            <li>Menemukan distributor lokal yang menawarkan pengantaran cepat.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="fw-bold text-danger mb-3"><i class="fas fa-circle-xmark me-2"></i> Frustrasi & Ketakutan</h6>
+                                        <ul class="small text-muted mb-0">
+                                            <li class="mb-2">Pernah tertipu saat membeli barang via grup Facebook di mana penjual memblokir nomornya setelah ditransfer.</li>
+                                            <li class="mb-2">Sulit mengoperasikan aplikasi belanja besar karena ukurannya berat dan fiturnya berbelit-belit.</li>
+                                            <li>Khawatir paket yang dikirim tertukar atau cacat tanpa ada garansi retur.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 mt-4 pt-3 border-top">
+                                        <h6 class="fw-bold text-dark mb-3">Tingkat Literasi & Keahlian</h6>
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <div class="skill-bar-container">
+                                                    <div class="skill-bar-label text-muted"><span>Keahlian Smartphone</span><span>35%</span></div>
+                                                    <div class="skill-bar"><div class="skill-bar-fill" style="width: 35%;"></div></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="skill-bar-container">
+                                                    <div class="skill-bar-label text-muted"><span>Kepercayaan E-Commerce</span><span>20%</span></div>
+                                                    <div class="skill-bar"><div class="skill-bar-fill" style="width: 20%;"></div></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="skill-bar-container">
+                                                    <div class="skill-bar-label text-muted"><span>Ketergantungan COD</span><span>95%</span></div>
+                                                    <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5 opacity-25">
+
+            <!-- STEP 2: DEFINE -->
+            <div id="define" class="case-study-step py-5">
+                <div class="row">
+                    <div class="col-lg-3" data-aos="fade-right">
+                        <div class="dt-step-number">02</div>
+                        <h3 class="dt-step-title text-primary">DEFINE</h3>
+                        <p class="text-muted small">Menganalisis hasil observasi untuk merumuskan inti permasalahan ke dalam Problem Statement dan menyusun pertanyaan penuntun ideation.</p>
+                    </div>
+                    <div class="col-lg-9" data-aos="fade-left">
+                        <!-- Problem Statement -->
+                        <div class="glass-panel p-4 mb-5 border-start border-primary border-4" id="problemStatementPanel">
+                            <h5 class="fw-bold text-primary mb-3"><i class="fas fa-quote-left me-2"></i> Problem Statement</h5>
+                            <p class="text-dark mb-0 fw-medium fst-italic text-justify">
+                                "Pak Budi, seorang pedagang toko kelontong sub-urban berusia 45 tahun yang minim akses finansial digital, membutuhkan cara berbelanja stok dagangan yang aman, dapat diuji barangnya sebelum dibayar, serta menggunakan alur pemesanan yang sangat sederhana, karena beliau tidak memiliki akun rekening bank dan trauma akan risiko penipuan transaksi e-commerce."
+                            </p>
+                        </div>
+
+                        <!-- HMW -->
+                        <h5 class="mb-4 fw-bold text-dark"><i class="fas fa-lightbulb text-primary me-2"></i> How Might We (Bagaimana Kita Bisa?)</h5>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="hmw-card" id="hmwCard1">
+                                    <h6 class="text-primary fw-bold mb-3">HMW 1</h6>
+                                    <p class="text-muted small mb-0">Bagaimana kita menyederhanakan alur transaksi belanja online agar bisa diselesaikan dalam kurung waktu kurang dari 2 menit oleh pengguna awam?</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="hmw-card" id="hmwCard2">
+                                    <h6 class="text-primary fw-bold mb-3">HMW 2</h6>
+                                    <p class="text-muted small mb-0">Bagaimana kita meyakinkan pengguna bahwa uang mereka 100% aman tanpa mengharuskan mereka melakukan pembayaran transfer di muka?</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="hmw-card" id="hmwCard3">
+                                    <h6 class="text-primary fw-bold mb-3">HMW 3</h6>
+                                    <p class="text-muted small mb-0">Bagaimana kita menghadirkan jaminan kualitas barang yang dapat diperiksa langsung di tempat sebelum uang tunai diserahkan kepada kurir?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5 opacity-25">
+
+            <!-- STEP 3: IDEATE -->
+            <div id="ideate" class="case-study-step py-5">
+                <div class="row">
+                    <div class="col-lg-3" data-aos="fade-right">
+                        <div class="dt-step-number">03</div>
+                        <h3 class="dt-step-title text-primary">IDEATE</h3>
+                        <p class="text-muted small">Mengembangkan alternatif solusi melalui metode Crazy 8's, merancang diagram User Flow transparan, dan menyusun Arsitektur Informasi yang efisien.</p>
+                    </div>
+                    <div class="col-lg-9" data-aos="fade-left">
+                        <!-- Crazy 8 Sketches -->
+                        <h5 class="mb-4 fw-bold text-dark"><i class="fas fa-pencil-ruler text-primary me-2"></i> Sketsa Crazy 8's (Wireframe Kasar)</h5>
+                        <div class="crazy8-grid mb-5">
+                            <div class="crazy8-card" id="crazyCard1">
+                                <span class="crazy8-number">01</span>
+                                <div class="crazy8-sketch">
+                                    <!-- Inline SVG for Sketch 1 -->
+                                    <svg viewBox="0 0 100 150">
+                                        <rect x="5" y="5" width="90" height="140" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                                        <circle cx="50" cy="50" r="15" fill="none" stroke="#94a3b8" stroke-width="2"/>
+                                        <line x1="35" y1="50" x2="65" y2="50" stroke="#94a3b8" stroke-width="2"/>
+                                        <line x1="50" y1="35" x2="50" y2="65" stroke="#94a3b8" stroke-width="2"/>
+                                        <rect x="30" y="85" width="40" height="8" rx="2" fill="none" stroke="#94a3b8" stroke-width="2"/>
+                                        <rect x="20" y="115" width="60" height="12" rx="6" fill="#cbd5e1"/>
+                                    </svg>
+                                </div>
+                                <h6>Splash & Slogan</h6>
+                            </div>
+                            <div class="crazy8-card" id="crazyCard2">
+                                <span class="crazy8-number">02</span>
+                                <div class="crazy8-sketch">
+                                    <!-- Inline SVG for Sketch 2 -->
+                                    <svg viewBox="0 0 100 150">
+                                        <rect x="5" y="5" width="90" height="140" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                                        <rect x="15" y="15" width="70" height="15" rx="3" fill="none" stroke="#94a3b8" stroke-width="2"/>
+                                        <rect x="15" y="40" width="30" height="30" rx="3" fill="#cbd5e1"/>
+                                        <rect x="55" y="40" width="30" height="30" rx="3" fill="#cbd5e1"/>
+                                        <rect x="15" y="80" width="70" height="45" rx="5" fill="none" stroke="#94a3b8" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <h6>Home & Toko Terdekat</h6>
+                            </div>
+                            <div class="crazy8-card" id="crazyCard3">
+                                <span class="crazy8-number">03</span>
+                                <div class="crazy8-sketch">
+                                    <!-- Inline SVG for Sketch 3 -->
+                                    <svg viewBox="0 0 100 150">
+                                        <rect x="5" y="5" width="90" height="140" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                                        <rect x="15" y="15" width="70" height="60" rx="4" fill="#cbd5e1"/>
+                                        <line x1="15" y1="85" x2="60" y2="85" stroke="#94a3b8" stroke-width="3"/>
+                                        <rect x="15" y="95" width="45" height="10" rx="2" fill="none" stroke="#10b981" stroke-width="1.5"/>
+                                        <rect x="15" y="115" width="70" height="15" rx="7" fill="#1b52c0"/>
+                                    </svg>
+                                </div>
+                                <h6>Halaman Produk & Tag COD</h6>
+                            </div>
+                            <div class="crazy8-card" id="crazyCard4">
+                                <span class="crazy8-number">04</span>
+                                <div class="crazy8-sketch">
+                                    <!-- Inline SVG for Sketch 4 -->
+                                    <svg viewBox="0 0 100 150">
+                                        <rect x="5" y="5" width="90" height="140" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                                        <rect x="15" y="20" width="70" height="25" rx="3" fill="none" stroke="#94a3b8" stroke-width="2"/>
+                                        <rect x="15" y="55" width="70" height="35" rx="3" fill="none" stroke="#94a3b8" stroke-width="2"/>
+                                        <rect x="15" y="115" width="70" height="18" rx="9" fill="#10b981"/>
+                                    </svg>
+                                </div>
+                                <h6>Checkout Instan COD</h6>
+                            </div>
+                            <div class="crazy8-card" id="crazyCard5">
+                                <span class="crazy8-number">05</span>
+                                <div class="crazy8-sketch">
+                                    <!-- Inline SVG for Sketch 5 -->
+                                    <svg viewBox="0 0 100 150">
+                                        <rect x="5" y="5" width="90" height="140" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                                        <line x1="20" y1="30" x2="20" y2="120" stroke="#cbd5e1" stroke-width="3"/>
+                                        <circle cx="20" cy="40" r="5" fill="#1b52c0"/>
+                                        <circle cx="20" cy="80" r="5" fill="#cbd5e1"/>
+                                        <circle cx="20" cy="120" r="5" fill="#cbd5e1"/>
+                                        <rect x="35" y="32" width="45" height="15" rx="3" fill="none" stroke="#94a3b8" stroke-width="2"/>
+                                        <rect x="35" y="72" width="45" height="15" rx="3" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <h6>Pelacakan Pengiriman</h6>
+                            </div>
+                            <div class="crazy8-card" id="crazyCard6">
+                                <span class="crazy8-number">06</span>
+                                <div class="crazy8-sketch">
+                                    <!-- Inline SVG for Sketch 6 -->
+                                    <svg viewBox="0 0 100 150">
+                                        <rect x="5" y="5" width="90" height="140" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                                        <circle cx="50" cy="40" r="15" fill="#cbd5e1"/>
+                                        <rect x="20" y="70" width="60" height="20" rx="3" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+                                        <line x1="30" y1="80" x2="70" y2="80" stroke="#94a3b8" stroke-width="3" stroke-dasharray="5 5"/>
+                                        <rect x="15" y="115" width="70" height="16" rx="8" fill="#1b52c0"/>
+                                    </svg>
+                                </div>
+                                <h6>PIN Serah Terima COD</h6>
+                            </div>
+                            <div class="crazy8-card" id="crazyCard7">
+                                <span class="crazy8-number">07</span>
+                                <div class="crazy8-sketch">
+                                    <!-- Inline SVG for Sketch 7 -->
+                                    <svg viewBox="0 0 100 150">
+                                        <rect x="5" y="5" width="90" height="140" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                                        <rect x="15" y="15" width="70" height="25" rx="3" fill="none" stroke="#94a3b8" stroke-width="2"/>
+                                        <rect x="15" y="50" width="70" height="25" rx="3" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+                                        <rect x="15" y="85" width="70" height="25" rx="3" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <h6>Keranjang Minimalis</h6>
+                            </div>
+                            <div class="crazy8-card" id="crazyCard8">
+                                <span class="crazy8-number">08</span>
+                                <div class="crazy8-sketch">
+                                    <!-- Inline SVG for Sketch 8 -->
+                                    <svg viewBox="0 0 100 150">
+                                        <rect x="5" y="5" width="90" height="140" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                                        <circle cx="50" cy="35" r="18" fill="#cbd5e1"/>
+                                        <rect x="25" y="65" width="50" height="10" rx="2" fill="none" stroke="#94a3b8" stroke-width="2"/>
+                                        <rect x="15" y="90" width="70" height="40" rx="4" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <h6>Profil & Menu Bantuan</h6>
+                            </div>
+                        </div>
+
+                        <!-- User Flow -->
+                        <h5 class="mb-4 fw-bold text-dark"><i class="fas fa-route text-primary me-2"></i> Diagram Alur Pengguna (User Flow)</h5>
+                        <div class="userflow-container mb-5" id="userFlowContainer">
+                            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-2 text-center">
+                                <div class="flow-step-node">Mulai & Cari Barang</div>
+                                <div class="flow-arrow-icon"><i class="fas fa-chevron-right d-none d-md-block"></i><i class="fas fa-chevron-down d-block d-md-none"></i></div>
+                                <div class="flow-step-node">Halaman Detail Produk</div>
+                                <div class="flow-arrow-icon"><i class="fas fa-chevron-right d-none d-md-block"></i><i class="fas fa-chevron-down d-block d-md-none"></i></div>
+                                <div class="flow-step-node condition">Pilihan COD Tersedia?</div>
+                                <div class="flow-arrow-icon"><i class="fas fa-chevron-right d-none d-md-block"></i><i class="fas fa-chevron-down d-block d-md-none"></i></div>
+                                <div class="flow-step-node">Checkout Dengan COD</div>
+                                <div class="flow-arrow-icon"><i class="fas fa-chevron-right d-none d-md-block"></i><i class="fas fa-chevron-down d-block d-md-none"></i></div>
+                                <div class="flow-step-node">Cek Barang & Bayar Tunai</div>
+                            </div>
+                        </div>
+
+                        <!-- Information Architecture -->
+                        <h5 class="mb-4 fw-bold text-dark"><i class="fas fa-sitemap text-primary me-2"></i> Arsitektur Informasi (Sitemap)</h5>
+                        <div class="glass-panel p-4" id="sitemapContainer">
+                            <div class="sitemap-tree">
+                                <div class="sitemap-node">Aplikasi Belanja.id</div>
+                                <div class="sitemap-branches">
+                                    <div class="sitemap-branch-col">
+                                        <div class="sitemap-subnode fw-bold text-primary">Home / Utama</div>
+                                        <div class="sitemap-subnode">Rekomendasi</div>
+                                        <div class="sitemap-subnode">Cari Produk</div>
+                                    </div>
+                                    <div class="sitemap-branch-col">
+                                        <div class="sitemap-subnode fw-bold text-primary">Pesanan & COD</div>
+                                        <div class="sitemap-subnode">Pelacak Kurir</div>
+                                        <div class="sitemap-subnode">Kode PIN Retur</div>
+                                    </div>
+                                    <div class="sitemap-branch-col">
+                                        <div class="sitemap-subnode fw-bold text-primary">Akun Profil</div>
+                                        <div class="sitemap-subnode">Alamat Rumah</div>
+                                        <div class="sitemap-subnode">Hubungi Bantuan</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEP 4: DESIGN SYSTEM -->
+    <section id="designsystem" class="bg-light">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="section-tag">UI Kit & Styleguide</span>
+                <h2>Sistem Desain <span>(Design System)</span></h2>
+                <p class="section-desc">Pondasi visual yang konsisten untuk menghadirkan pengalaman pengguna yang harmonis dan terstruktur.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Color Palette -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="glass-panel p-4 h-100" id="colorPaletteCard">
+                        <h5 class="fw-bold mb-4 text-dark"><i class="fas fa-palette text-primary me-2"></i> Palet Warna (Color Palette)</h5>
+                        <div class="row g-3">
+                            <div class="col-4">
+                                <div class="color-swatch-card" id="swatchPrimary">
+                                    <div class="color-swatch-preview" style="background-color: #1B52C0;"></div>
+                                    <h6 class="mb-1 small">Primary Blue</h6>
+                                    <code>#1B52C0</code>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="color-swatch-card" id="swatchSecondary">
+                                    <div class="color-swatch-preview" style="background-color: #0FBCF9;"></div>
+                                    <h6 class="mb-1 small">Vibrant Cyan</h6>
+                                    <code>#0FBCF9</code>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="color-swatch-card" id="swatchDark">
+                                    <div class="color-swatch-preview" style="background-color: #0A1128;"></div>
+                                    <h6 class="mb-1 small">Deep Slate</h6>
+                                    <code>#0A1128</code>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="color-swatch-card" id="swatchSuccess">
+                                    <div class="color-swatch-preview" style="background-color: #10B981;"></div>
+                                    <h6 class="mb-1 small">COD Tag Green</h6>
+                                    <code>#10B981</code>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="color-swatch-card" id="swatchWarning">
+                                    <div class="color-swatch-preview" style="background-color: #F59E0B;"></div>
+                                    <h6 class="mb-1 small">Warning Amber</h6>
+                                    <code>#F59E0B</code>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="color-swatch-card" id="swatchDanger">
+                                    <div class="color-swatch-preview" style="background-color: #EF4444;"></div>
+                                    <h6 class="mb-1 small">Alert Red</h6>
+                                    <code>#EF4444</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typography & UI Elements -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="glass-panel p-4 h-100" id="typoElementsCard">
+                        <h5 class="fw-bold mb-4 text-dark"><i class="fas fa-font text-primary me-2"></i> Tipografi & Elemen Kontrol</h5>
+                        <div class="mb-4">
+                            <h6 class="text-primary fw-bold mb-2">Jenis Huruf (Typography)</h6>
+                            <div class="p-3 bg-white border rounded-3 mb-3">
+                                <h4 class="mb-1" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Poppins Bold (Heading)</h4>
+                                <p class="mb-0 text-muted" style="font-family: 'Inter', sans-serif;">Inter Regular/Medium (Body Text) - Dipilih karena tingkat keterbacaan yang sangat tinggi pada resolusi layar ponsel rendah.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="text-primary fw-bold mb-2">Tombol & Komponen (Buttons & Badges)</h6>
+                            <div class="d-flex flex-wrap gap-2 align-items-center">
+                                <button class="btn btn-primary-custom px-4 py-2" style="font-size: 0.9rem;" id="specBtnPrimary">Tombol Utama</button>
+                                <button class="btn btn-outline-primary rounded-pill px-4 py-2" style="font-weight:600; font-size: 0.9rem;" id="specBtnOutline">Tombol Garis</button>
+                                <span class="badge bg-success px-3 py-2 rounded-pill"><i class="fas fa-check me-1"></i> COD Tersedia</span>
+                                <span class="badge bg-danger px-3 py-2 rounded-pill"><i class="fas fa-ban me-1"></i> Batalkan Retur</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEP 5: HIGH FIDELITY DESIGN SHOWCASE -->
+    <section id="mockups" class="bg-white">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="section-tag">Desain Akhir</span>
+                <h2>Antarmuka Kerapatan Tinggi <span>(High-Fidelity UI)</span></h2>
+                <p class="section-desc">Hasil perancangan layar visual aplikasi Belanja.id yang bersih, kontras tinggi, dan berfokus pada kemudahan transaksi COD.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Splash Screen -->
+                <div class="col-6 col-md-4 col-lg-2-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-phone-item" id="galleryItem1">
+                        <div class="phone-mockup-frame">
+                            <img src="assets/img/splash.png" alt="Splash Screen Mockup" id="imgSplash">
+                        </div>
+                        <h6 class="fw-bold mb-1">Splash Screen</h6>
+                        <span class="text-muted small">Branding & Slogan</span>
+                    </div>
+                </div>
+
+                <!-- Home Screen -->
+                <div class="col-6 col-md-4 col-lg-2-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-phone-item" id="galleryItem2">
+                        <div class="phone-mockup-frame">
+                            <img src="assets/img/home.png" alt="Home Screen Mockup" id="imgHome">
+                        </div>
+                        <h6 class="fw-bold mb-1">Beranda Utama</h6>
+                        <span class="text-muted small">Navigasi Kategori</span>
+                    </div>
+                </div>
+
+                <!-- Product Detail -->
+                <div class="col-6 col-md-4 col-lg-2-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-phone-item" id="galleryItem3">
+                        <div class="phone-mockup-frame">
+                            <img src="assets/img/product.png" alt="Product Screen Mockup" id="imgProduct">
+                        </div>
+                        <h6 class="fw-bold mb-1">Detail Produk</h6>
+                        <span class="text-muted small">Tag COD & Retur Jelas</span>
+                    </div>
+                </div>
+
+                <!-- Cart Screen -->
+                <div class="col-6 col-md-4 col-lg-2-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-phone-item" id="galleryItem4">
+                        <div class="phone-mockup-frame">
+                            <img src="assets/img/cart.png" alt="Cart Screen Mockup" id="imgCart">
+                        </div>
+                        <h6 class="fw-bold mb-1">Keranjang Belanja</h6>
+                        <span class="text-muted small">Perhitungan Total Transparan</span>
+                    </div>
+                </div>
+
+                <!-- Profile Screen -->
+                <div class="col-6 col-md-4 col-lg-2-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="gallery-phone-item" id="galleryItem5">
+                        <div class="phone-mockup-frame">
+                            <img src="assets/img/profile.png" alt="Profile Screen Mockup" id="imgProfile">
+                        </div>
+                        <h6 class="fw-bold mb-1">Profil Pengguna</h6>
+                        <span class="text-muted small">Akses Bantuan Cepat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEP 6: INTERACTIVE PROTOTYPE -->
+    <section id="prototype" class="interactive-proto-section">
+        <div class="container text-center">
+            <div class="section-title text-center text-white" data-aos="fade-up">
+                <span class="section-tag bg-white bg-opacity-10 text-white">Demonstrasi</span>
+                <h2 class="text-white">Prototipe Interaktif <span>(Interactive Prototype)</span></h2>
+                <p class="section-desc text-light-muted">Simulasikan langsung alur kerja berbelanja COD yang aman pada penampil handphone di bawah ini.</p>
+            </div>
+
+            <div class="interactive-proto-panel mb-5" data-aos="zoom-in" id="interactivePanel">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0 text-md-start">
+                        <h4 class="text-white mb-3">Uji Coba Alur Mandiri</h4>
+                        <p class="text-light-muted small mb-4">Simulasikan alur pemesanan barang dengan sistem COD yang aman. Klik pada lingkaran berkedip di layar ponsel untuk melangkah ke tahap berikutnya:</p>
+                        <div class="prototype-stepper" id="protoStepper">
+                            <div class="stepper-step active" data-step="0">
+                                <span class="step-num">1</span>
+                                <div class="step-content">
+                                    <h6>Layar Splash</h6>
+                                    <p class="small text-light-muted mb-0">Klik tombol lingkaran berkedip di tengah bawah layar untuk memulai aplikasi.</p>
+                                </div>
+                            </div>
+                            <div class="stepper-step" data-step="1">
+                                <span class="step-num">2</span>
+                                <div class="step-content">
+                                    <h6>Beranda Utama</h6>
+                                    <p class="small text-light-muted mb-0">Pilih produk sembako (paling atas kiri) untuk melihat detail barang.</p>
+                                </div>
+                            </div>
+                            <div class="stepper-step" data-step="2">
+                                <span class="step-num">3</span>
+                                <div class="step-content">
+                                    <h6>Detail Produk</h6>
+                                    <p class="small text-light-muted mb-0">Tinjau tag COD Aman, lalu klik tombol hijau "Beli Sekarang".</p>
+                                </div>
+                            </div>
+                            <div class="stepper-step" data-step="3">
+                                <span class="step-num">4</span>
+                                <div class="step-content">
+                                    <h6>Keranjang Belanja</h6>
+                                    <p class="small text-light-muted mb-0">Periksa rincian biaya, lalu klik tombol hijau "Checkout & Bayar di Tempat".</p>
+                                </div>
+                            </div>
+                            <div class="stepper-step" data-step="4">
+                                <span class="step-num">5</span>
+                                <div class="step-content">
+                                    <h6>Halaman Profil / Sukses</h6>
+                                    <p class="small text-light-muted mb-0">Pesanan COD berhasil dibuat! Klik ikon profil/avatar di atas kiri untuk mengulang.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mockup-proto-frame" id="protoFrame">
+                            <!-- Clickable simulated phone -->
+                            <img src="assets/img/splash.png" alt="Simulated Screen Showcase" id="simulatedPhoneScreen">
+                            <div class="prototype-hotspot" id="hotspotBtn"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-primary-custom px-5 py-3" data-aos="fade-up" id="externalProtoLink">
+                <i class="fas fa-arrow-up-right-from-square me-2"></i> Buka Prototipe Lengkap di Figma
+            </a>
+        </div>
+    </section>
+
+    <!-- STEP 7: USABILITY TESTING -->
+    <section id="testing" class="bg-white">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="section-tag">Hasil Validasi</span>
+                <h2>Uji Keterpakaian <span>(Usability Testing)</span></h2>
+                <p class="section-desc">Mengukur kegunaan aplikasi melalui sesi pengujian UT terstruktur bersama 5 partisipan perwakilan persona Budi.</p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <!-- SUS Score Gauge -->
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="sus-card" id="susScoreCard">
+                        <h5 class="fw-bold mb-4 text-dark">System Usability Scale</h5>
+                        <div class="sus-gauge-container">
+                            <svg class="sus-gauge-circle" width="180" height="180">
+                                <circle class="sus-gauge-bg" cx="90" cy="90" r="75"/>
+                                <circle class="sus-gauge-fill" cx="90" cy="90" r="75"/>
+                            </svg>
+                            <div class="sus-gauge-text">
+                                <div class="sus-number" id="susVal">82.5</div>
+                                <div class="sus-label">Excellent</div>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-0">Skor rata-api SUS bernilai <strong>82.5</strong> (Grade A), mengindikasikan antarmuka Belanja.id sangat mudah diterima oleh kelompok usia target.</p>
+                    </div>
+                </div>
+
+                <!-- Stats Columns -->
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="row g-3 h-100">
+                        <div class="col-6">
+                            <div class="ut-stat-card" id="utStat1">
+                                <div class="ut-stat-val">95%</div>
+                                <h6 class="fw-bold text-dark mb-1">Task Success Rate</h6>
+                                <p class="text-muted small mb-0">Partisipan berhasil menyelesaikan alur pemesanan COD secara mandiri.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="ut-stat-card" id="utStat2">
+                                <div class="ut-stat-val">92%</div>
+                                <h6 class="fw-bold text-dark mb-1">Learnability Rate</h6>
+                                <p class="text-muted small mb-0">Tingkat kemudahan pemahaman navigasi pada interaksi pertama.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="ut-stat-card" id="utStat3">
+                                <div class="ut-stat-val">94%</div>
+                                <h6 class="fw-bold text-dark mb-1">User Satisfaction</h6>
+                                <p class="text-muted small mb-0">Skor kepuasan pengguna terhadap penyederhanaan fitur COD.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="ut-stat-card" id="utStat4">
+                                <div class="ut-stat-val">100%</div>
+                                <h6 class="fw-bold text-dark mb-1">COD Understanding</h6>
+                                <p class="text-muted small mb-0">Kemudahan dalam membedakan produk bersistem bayar di tempat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UT Feedbacks & Iterations -->
+            <div class="row g-4 mt-3">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="glass-panel p-4 h-100 border-start border-success border-4" id="positiveFeedbackPanel">
+                        <h5 class="text-success fw-bold mb-3"><i class="fas fa-face-smile me-2"></i> Umpan Balik Positif</h5>
+                        <ul class="text-muted small mb-0">
+                            <li class="mb-3">"Tombol beli sekarang sangat besar, mata saya yang agak kabur bisa melihatnya dengan sangat jelas tanpa kacamata."</li>
+                            <li class="mb-3">"Pilihan COD di bagian pembayaran langsung aktif. Saya tidak perlu pusing mencari cara transfer bank."</li>
+                            <li>"Adanya tulisan 'Bisa Buka Paket Dulu Baru Bayar' membuat saya merasa tenang dan tidak takut kena tipu."</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="glass-panel p-4 h-100 border-start border-warning border-4" id="improvementPanel">
+                        <h5 class="text-warning fw-bold mb-3"><i class="fas fa-face-lightbulb me-2"></i> Rekomendasi & Iterasi Desain</h5>
+                        <ul class="text-muted small mb-0">
+                            <li class="mb-3"><strong>Masalah:</strong> Beberapa pengguna bingung apakah paket mereka sudah jalan atau belum karena minimnya status.</li>
+                            <li class="mb-3"><strong>Perbaikan:</strong> Menambahkan kartu pelacak kurir visual sederhana berikon motor di layar Beranda & Pesanan.</li>
+                            <li><strong>Masalah:</strong> Ukuran font alamat di halaman Checkout dirasa kurang besar untuk dibaca dengan cepat.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Before vs After Showcase -->
+            <h5 class="fw-bold text-dark mt-5 mb-4 text-center" data-aos="fade-up"><i class="fas fa-shuffle text-primary me-2"></i> Perbandingan Iterasi Sebelum & Sesudah UT</h5>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="iteration-compare-box" id="iterBox1">
+                        <div class="compare-header text-danger"><i class="fas fa-circle-xmark me-2"></i> Desain Awal (Sebelum Pengujian)</div>
+                        <div class="compare-body">
+                            <p class="text-muted small mb-0">Tombol pembayaran COD memiliki ukuran yang sama dengan opsi bank transfer, sehingga pengguna awam sering tidak sengaja menekan pilihan bank transfer lalu kebingungan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="iteration-compare-box shadow-md" id="iterBox2">
+                        <div class="compare-header text-success"><div class="d-flex justify-content-between align-items-center"><span><i class="fas fa-circle-check me-2"></i> Desain Akhir (Iterasi Hasil UT)</span> <span class="badge bg-success small">Direkomendasikan</span></div></div>
+                        <div class="compare-body">
+                            <p class="text-muted small mb-0">Opsi COD disajikan sebagai tombol default terpilih dengan warna biru solid dan tag keterangan 'Bebas Risiko'. Alternatif pembayaran lain disembunyikan di menu drop-down tambahan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creator Section -->
+    <section id="creator" class="bg-light">
+        <div class="container">
+            <div class="profile-card text-center" data-aos="zoom-in" id="profileCardWrapper">
+                <img src="assets/img/profile.png" alt="Ahmad Arifin Al Falah" class="profile-avatar mb-4" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Ahmad+Arifin&background=1B52C0&color=fff&size=150';">
+                <h3 class="mb-1 text-dark">Ahmad Arifin Al Falah</h3>
+                <p class="text-primary fw-semibold mb-3">UI/UX Designer & Front-End Developer</p>
+                <p class="text-muted small mx-auto mb-4" style="max-width: 580px;">
+                    Mahasiswa kreatif yang berdedikasi memecahkan masalah keseharian melalui perancangan antarmuka pengguna yang bersih, fungsional, dan ramah pengguna. Terima kasih telah menyimak studi kasus ini.
+                </p>
+                <div class="profile-links d-flex justify-content-center" id="creatorSocialLinks">
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn Profile" id="linkLinkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com" target="_blank" aria-label="GitHub Profile" id="linkGithub"><i class="fab fa-github"></i></a>
+                    <a href="https://behance.net" target="_blank" aria-label="Behance Profile" id="linkBehance"><i class="fab fa-behance"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram Profile" id="linkInstagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <h3 class="footer-brand mb-4">Belanja<span>.id</span> <i class="fas fa-check-circle"></i></h3>
+            <div class="footer-links d-flex justify-content-center gap-4 mb-4 flex-wrap" id="footerNavLinks">
+                <a href="#home">Home</a>
+                <a href="#problem">Problem</a>
+                <a href="#empathy">Empathy</a>
+                <a href="#define">Define</a>
+                <a href="#ideate">Ideate</a>
+                <a href="#designsystem">Design System</a>
+                <a href="#mockups">UI Design</a>
+                <a href="#prototype">Prototype</a>
+                <a href="#testing">Testing</a>
+                <a href="#creator">Team</a>
+            </div>
+            <div class="footer-socials mb-4" id="footerSocialsLinks">
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" id="footLinkLinkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" aria-label="GitHub" id="footLinkGithub"><i class="fab fa-github"></i></a>
+                <a href="https://behance.net" target="_blank" aria-label="Behance" id="footLinkBehance"><i class="fab fa-behance"></i></a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2026 Ahmad Arifin Al Falah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Scroll Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
